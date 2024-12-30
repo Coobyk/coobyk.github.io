@@ -55,6 +55,7 @@ body {
     color: #6c2dc7;
     text-decoration: none;
     font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 .navbar .links a:hover {
