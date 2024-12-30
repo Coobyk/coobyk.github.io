@@ -43,6 +43,7 @@ body {
 }
 
 .navbar .links {
+    position: relative;
     display: flex;
     list-style: none;
     align-items: center;
@@ -68,7 +69,6 @@ body {
     color: #ffffff;
     background-color: #000000;
     transform: scale(1.2);
-    padding: 5px 10px;
 }
 
 .navbar .outlinks {
@@ -97,7 +97,6 @@ body {
     color: #ffffff;
     background-color: #000000;
     transform: scale(1.2);
-    padding: 5px 10px;
 }
 
 .hero {
