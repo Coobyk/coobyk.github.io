@@ -55,14 +55,6 @@ body {
     color: #6c2dc7;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.navbar .links a:hover {
-    color: #ffffff;
-}
-
-.navbar .links li {
     transition:
         color 0.3s ease,
         transform 0.3s ease,
@@ -72,7 +64,8 @@ body {
     padding: 5px;
 }
 
-.navbar .links li:hover {
+.navbar .links a:hover {
+    color: #ffffff;
     background-color: #000000;
     transform: scale(1.2);
     padding: 5px 10px;
@@ -91,14 +84,6 @@ body {
     color: #6c2dc7;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.navbar .outlinks a:hover {
-    color: #ffffff;
-}
-
-.navbar .outlinks li {
     transition:
         color 0.3s ease,
         transform 0.3s ease,
@@ -108,7 +93,8 @@ body {
     padding: 5px;
 }
 
-.navbar .outlinks li:hover {
+.navbar .outlinks a:hover {
+    color: #ffffff;
     background-color: #000000;
     transform: scale(1.2);
     padding: 5px 10px;
