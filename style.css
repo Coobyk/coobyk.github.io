@@ -109,15 +109,12 @@ body {
     transform-origin: bottom;
     margin: auto;
     margin-top: 0;
-    transition:
-        font-size 0.2s ease,
-        translate 0.2s ease;
+    transition: transform 0.1s ease;
     font-size: 5rem;
 }
 
 .hero .name .letter:hover {
-    font-size: 7rem;
-    translate: 0px -32px;
+    transform: scale(1.5);
 }
 
 .footer {
