@@ -44,6 +44,7 @@ body {
 
 .navbar .links {
     display: flex;
+    list-style: none;
     align-items: center;
     border: none;
     margin: 0px 0px;
@@ -54,6 +55,13 @@ body {
     color: #6c2dc7;
     text-decoration: none;
     font-weight: 500;
+}
+
+.navbar .links a:hover {
+    color: #ffffff;
+}
+
+.navbar .links li {
     transition:
         color 0.3s ease,
         transform 0.3s ease,
@@ -64,8 +72,7 @@ body {
     margin: 0px 5px;
 }
 
-.navbar .links a:hover {
-    color: #ffffff;
+.navbar .links li:hover {
     background-color: #000000;
     transform: scale(1.2);
     padding: 5px 10px;
