@@ -27,7 +27,7 @@ body {
     border-radius: 5px;
     padding-right: 10px;
     backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #00000080;
     z-index: 999;
 }
 
@@ -55,7 +55,7 @@ body {
 
 .navbar .links a {
     color: #6c2dc7;
-    background-color: #00000088;
+    background-color: #00000080;
     backdrop-filter: blur(10px);
     text-decoration: none;
     font-weight: 500;
@@ -84,7 +84,7 @@ body {
 
 .navbar .outlinks a {
     color: #6c2dc7;
-    background-color: #00000088;
+    background-color: #00000080;
     backdrop-filter: blur(10px);
     text-decoration: none;
     font-weight: 500;
@@ -99,7 +99,6 @@ body {
 
 .navbar .outlinks a:hover {
     color: #ffffff;
-    background-color: #00000088;
     transform: scale(1.2);
 }
 
