@@ -118,6 +118,15 @@ body {
     width: auto;
     transition: transform 0.3s ease;
     margin-bottom: 30px;
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    -webkit-clip-path: polygon(
+        50% 0,
+        100% 25%,
+        100% 75%,
+        50% 100%,
+        0 75%,
+        0 25%
+    );
 }
 
 .hero img:hover {
