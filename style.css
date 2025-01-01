@@ -123,7 +123,6 @@ body {
     max-width: 500px;
     width: auto;
     transition: transform 0.3s ease;
-    margin-bottom: 30px;
     clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
     -webkit-clip-path: polygon(
         50% 0,
@@ -139,7 +138,12 @@ body {
     transform: scale(1.2);
 }
 
-.hero .big_logo .name {
+.hero .big_logo .text {
+    align-self: center;
+    align-items: center;
+}
+
+.hero .big_logo .text .name {
     font-size: 8rem;
     margin: 0;
     color: #6c2dc7;
@@ -148,7 +152,7 @@ body {
     font-weight: bold;
 }
 
-.hero .big_logo .name .letter {
+.hero .big_logo .text .name .letter {
     transform-origin: bottom;
     margin: auto;
     margin-top: 0;
@@ -156,7 +160,7 @@ body {
     font-size: 8rem;
 }
 
-.hero .name .letter:hover {
+.hero .big_logo .text .name .letter:hover {
     transform: scale(1.5);
 }
 
