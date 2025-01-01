@@ -99,6 +99,10 @@ body {
     transform: scale(1.2);
 }
 
+.navbar .outlinks .github {
+    margin-right: 4px;
+}
+
 .hero {
     text-align: center;
     display: flex;
