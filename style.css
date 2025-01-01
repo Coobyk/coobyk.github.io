@@ -55,6 +55,8 @@ body {
 
 .navbar .links a {
     color: #6c2dc7;
+    background-color: #00000088;
+    backdrop-filter: blur(10px);
     text-decoration: none;
     font-weight: 500;
     transition:
@@ -68,7 +70,6 @@ body {
 
 .navbar .links a:hover {
     color: #ffffff;
-    background-color: #00000088;
     transform: scale(1.2);
 }
 
@@ -83,6 +84,8 @@ body {
 
 .navbar .outlinks a {
     color: #6c2dc7;
+    background-color: #00000088;
+    backdrop-filter: blur(10px);
     text-decoration: none;
     font-weight: 500;
     transition:
