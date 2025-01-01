@@ -28,6 +28,7 @@ body {
     padding-right: 10px;
     backdrop-filter: blur(10px);
     background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
 }
 
 .navbar .navlogo {
@@ -67,7 +68,7 @@ body {
 
 .navbar .links a:hover {
     color: #ffffff;
-    background-color: #000000;
+    background-color: #00000088;
     transform: scale(1.2);
 }
 
@@ -95,7 +96,7 @@ body {
 
 .navbar .outlinks a:hover {
     color: #ffffff;
-    background-color: #000000;
+    background-color: #00000088;
     transform: scale(1.2);
 }
 
