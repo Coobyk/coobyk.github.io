@@ -109,11 +109,17 @@ body {
 .hero {
     text-align: center;
     display: flex;
+    align-items: center;
     flex-direction: column;
     margin-top: 300px;
 }
 
-.hero img {
+.hero .big_logo {
+    display: inline-flex;
+    gap: 10%;
+}
+
+.hero .big_logo img {
     max-width: 500px;
     width: auto;
     transition: transform 0.3s ease;
@@ -129,11 +135,11 @@ body {
     );
 }
 
-.hero img:hover {
+.hero .big_logo img:hover {
     transform: scale(1.2);
 }
 
-.hero .name {
+.hero .big_logo .name {
     font-size: 5rem;
     margin: 0;
     color: #6c2dc7;
@@ -142,7 +148,7 @@ body {
     font-weight: bold;
 }
 
-.hero .name .letter {
+.hero .big_logo .name .letter {
     transform-origin: bottom;
     margin: auto;
     margin-top: 0;
