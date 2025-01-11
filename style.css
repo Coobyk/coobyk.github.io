@@ -1,33 +1,65 @@
+:root[data-theme="light"] {
+    --text: #13002e;
+    --background: #ece9f2;
+    --primary: #330080;
+    --secondary: #081377;
+    --accent: #7a0078;
+    --white: #000000;
+    --text-inverted: #e4d1ff;
+    --background-inverted: #100d16;
+    --primary-inverted: #b380ff;
+    --secondary-inverted: #8893f7;
+    --accent-inverted: #ff85fd;
+    --white-inverted: #ffffff;
+}
+:root[data-theme="dark"] {
+    --text: #e4d1ff;
+    --background: #100d16;
+    --primary: #b380ff;
+    --secondary: #8893f7;
+    --accent: #ff85fd;
+    --white: #ffffff;
+    --text-inverted: #13002e;
+    --background-inverted: #ece9f2;
+    --primary-inverted: #330080;
+    --secondary-inverted: #081377;
+    --accent-inverted: #7a0078;
+    --white-inverted: #000000;
+}
+
+a {
+    color: var(--accent);
+}
+
 body {
     font-family: "JetBrains Mono", monospace;
     margin: 0;
     padding: 0;
-    background-color: #000000;
-    color: #6c2dc7;
+    background-color: var(--background);
+    color: var(--text);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 100vh;
     overflow: scroll;
+    transition: all 0.3s ease;
 }
 
 .navbar {
+    color: var(--primary);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000000;
     position: fixed;
     top: 0;
     width: calc(100% - 12px);
     height: 60px;
-    border-color: #6c2dc7;
-    border-width: 1px;
-    border-style: solid;
+    border: 1px solid var(--primary);
     border-radius: 5px;
     padding-right: 10px;
     backdrop-filter: blur(10px);
-    background-color: #00000080;
+    background-color: rgba(var(--background), 0.5);
     z-index: 999;
 }
 
@@ -54,8 +86,7 @@ body {
 }
 
 .navbar .links a {
-    color: #6c2dc7;
-    background-color: #00000080;
+    background-color: rgba(var(--background), 0.5);
     backdrop-filter: blur(10px);
     text-decoration: none;
     font-weight: 500;
@@ -63,13 +94,13 @@ body {
         color 0.3s ease,
         transform 0.3s ease,
         padding 0.3s ease;
-    border: 1px solid #6c2dc7;
+    border: 1px solid var(--primary);
     border-radius: 5px;
     padding: 5px;
 }
 
 .navbar .links a:hover {
-    color: #ffffff;
+    color: var(--white);
     transform: scale(1.2);
 }
 
@@ -83,8 +114,7 @@ body {
 }
 
 .navbar .outlinks a {
-    color: #6c2dc7;
-    background-color: #00000080;
+    background-color: rgba(var(--background), 0.5);
     backdrop-filter: blur(10px);
     text-decoration: none;
     font-weight: 500;
@@ -92,13 +122,13 @@ body {
         color 0.3s ease,
         transform 0.3s ease,
         padding 0.3s ease;
-    border: 1px solid #6c2dc7;
+    border: 1px solid var(--primary);
     border-radius: 5px;
     padding: 5px;
 }
 
 .navbar .outlinks a:hover {
-    color: #ffffff;
+    color: var(--white);
     transform: scale(1.2);
 }
 
@@ -146,7 +176,7 @@ body {
 .hero .big_logo .text .name {
     font-size: 8rem;
     margin: 0;
-    color: #6c2dc7;
+    color: var(--primary);
     display: flex;
     align-self: center;
     font-weight: bold;
@@ -164,29 +194,52 @@ body {
     transform: scale(1.5);
 }
 
+.hero .big_logo .text .quote {
+    color: var(--secondary);
+}
+
 .hero .aboutme {
     display: flex;
-    color: #8146d5;
+    color: var(--text);
     flex-direction: column;
     text-align: left;
 }
 
 .hero .aboutme h1 {
     margin-bottom: 0;
+    color: var(--secondary);
 }
 
 .footer {
-    border-top: 1px solid #6c2dc7 dotted;
+    display: inline-flex;
+    gap: auto;
+    border-top: 1px dashed var(--primary);
     width: 100%;
     bottom: 0;
-    align-items: last baseline;
+    align-items: center;
+    justify-content: space-between;
     position: relative;
-    border-top: 1px #6c2dc7 dashed;
     margin-top: 100px;
 }
 
 .footer .footer-content {
     margin-left: 50px;
+}
+
+.footer .footer-controls {
+    justify-self: end;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.footer .footer-controls .themetoggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    background-color: var(--accent);
+    color: var(--text-inverted);
+    border: 1px solid var(--primary);
+    border-radius: 5px;
 }
 
 .page-wrapper {

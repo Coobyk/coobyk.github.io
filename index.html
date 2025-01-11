@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,6 +10,11 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+            rel="stylesheet"
+        />
+
         <link rel="icon" href="images/icon.png" />
     </head>
     <body>
@@ -53,7 +58,7 @@
                         <div class="letter">y</div>
                         <div class="letter">k</div>
                     </div>
-                    <h3>"I do what I want to do"</h3>
+                    <h3><span class="quote">"I do what I want to do"</span></h3>
                 </div>
             </div>
             <h3>Happy New Year!</h3>
@@ -78,6 +83,13 @@
                 <p>Made with ❤️ by Coobyk</p>
                 <p>Copyright Coobyk (2024–2025)</p>
             </div>
+            <div class="footer-controls">
+                <button class="themetoggle">
+                    <i class="material-icons-outlined">dark_mode</i>
+                    <b>Dark Mode</b>
+                </button>
+            </div>
         </footer>
+        <script src="theme-toggle.js" defer></script>
     </body>
 </html>
