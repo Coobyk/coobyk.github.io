@@ -42,7 +42,7 @@ body {
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    overflow: scroll;
+    overflow-x: hidden;
     transition: all 0.3s ease;
 }
 
