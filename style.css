@@ -32,7 +32,7 @@ a {
 }
 
 body {
-    font-family: "JetBrains Mono", monospace;
+    font-family: "JetBrains Mono", "Monospace";
     margin: 0;
     padding: 0;
     background-color: var(--background);
