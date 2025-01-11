@@ -164,6 +164,17 @@ body {
     transform: scale(1.5);
 }
 
+.hero .aboutme {
+    display: flex;
+    color: #8146d5;
+    flex-direction: column;
+    text-align: left;
+}
+
+.hero .aboutme h1 {
+    margin-bottom: 0;
+}
+
 .footer {
     border-top: 1px solid #6c2dc7 dotted;
     width: 100%;
