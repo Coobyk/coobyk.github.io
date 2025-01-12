@@ -44,8 +44,13 @@ body {
     border-radius: var(--border-radius);
     padding-right: 10px;
     backdrop-filter: blur(10px);
-    background-color: #0c0a1080;
+    background-color: color-mix(in srgb, var(--background), transparent);
     z-index: 999;
+}
+
+.navbar .home {
+    text-decoration: none;
+    color: inherit;
 }
 
 .navbar .navlogo {
@@ -53,11 +58,12 @@ body {
     align-items: center;
     gap: 10px;
     margin: 0px 15px;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .navbar .navlogo:hover {
     transform: scale(1.2);
+    color: var(--accent);
 }
 
 .navbar .links {
@@ -71,14 +77,11 @@ body {
 }
 
 .navbar .links a {
-    background-color: #0c0a1080;
+    background-color: color-mix(in srgb, var(--background), transparent);
     backdrop-filter: blur(10px);
     text-decoration: none;
     font-weight: 500;
-    transition:
-        color 0.3s ease,
-        transform 0.3s ease,
-        padding 0.3s ease;
+    transition: all 0.3s ease;
     border: 1px solid var(--primary);
     border-radius: var(--border-radius);
     padding: 5px;
@@ -87,6 +90,8 @@ body {
 .navbar .links a:hover {
     color: white;
     transform: scale(1.2);
+    border-color: var(--accent);
+    box-shadow: 0 0 10px var(--accent);
 }
 
 .navbar .outlinks {
@@ -99,14 +104,11 @@ body {
 }
 
 .navbar .outlinks a {
-    background-color: rgba(var(--background), 0.5);
+    background-color: color-mix(in srgb, var(--background), transparent);
     backdrop-filter: blur(10px);
     text-decoration: none;
     font-weight: 500;
-    transition:
-        color 0.3s ease,
-        transform 0.3s ease,
-        padding 0.3s ease;
+    transition: all 0.3s ease;
     border: 1px solid var(--primary);
     border-radius: var(--border-radius);
     padding: 5px;
@@ -115,6 +117,8 @@ body {
 .navbar .outlinks a:hover {
     color: white;
     transform: scale(1.2);
+    border-color: var(--accent);
+    box-shadow: 0 0 10px var(--accent);
 }
 
 .navbar .outlinks .github {
@@ -132,6 +136,7 @@ body {
 .hero .big_logo {
     display: inline-flex;
     gap: 10%;
+    margin-top: 40vh;
 }
 
 .hero .big_logo img {
@@ -171,12 +176,15 @@ body {
     transform-origin: bottom;
     margin: auto;
     margin-top: 0;
-    transition: transform 0.1s ease;
+    transition:
+        transform 0.1s ease,
+        text-shadow 0.1s ease;
     font-size: 8rem;
 }
 
 .hero .big_logo .text .name .letter:hover {
     transform: scale(1.5);
+    text-shadow: 0px 0px 4rem var(--primary);
 }
 
 .hero .big_logo .text .quote {
@@ -189,11 +197,35 @@ body {
     flex-direction: column;
     text-align: left;
     max-width: 50%;
+    background-color: color-mix(in srgb, var(--secondary) 10%, transparent 90%);
+    border-radius: 25px;
+    padding: 10px;
+    margin: 0px;
+    margin-bottom: 40px;
 }
 
 .hero h1 {
-    margin-bottom: 0;
+    margin: 0;
     color: var(--secondary);
+    padding: 0px;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
+.hero .aboutme h1 {
+    padding-bottom: 20px;
+}
+
+.hero .aboutme ul {
+    margin-bottom: 10px;
+}
+
+.hero ul {
+    padding: 0;
+    padding-right: 10px;
+    padding-left: 31px;
+    margin: 0;
+    list-style: square;
 }
 
 .footer {
