@@ -198,14 +198,15 @@ body {
     color: var(--secondary);
 }
 
-.hero .aboutme {
+.hero section {
     display: flex;
     color: var(--text);
     flex-direction: column;
     text-align: left;
+    max-width: 50%;
 }
 
-.hero .aboutme h1 {
+.hero h1 {
     margin-bottom: 0;
     color: var(--secondary);
 }
