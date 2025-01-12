@@ -1,30 +1,15 @@
-:root[data-theme="light"] {
-    --text: #13002e;
-    --background: #ece9f2;
-    --primary: #330080;
-    --secondary: #081377;
-    --accent: #7a0078;
-    --white: #000000;
-    --text-inverted: #e4d1ff;
-    --background-inverted: #100d16;
-    --primary-inverted: #b380ff;
-    --secondary-inverted: #8893f7;
-    --accent-inverted: #ff85fd;
-    --white-inverted: #ffffff;
-}
-:root[data-theme="dark"] {
+:root {
     --text: #e4d1ff;
-    --background: #100d16;
+    --background: #0c0a10;
     --primary: #b380ff;
     --secondary: #8893f7;
     --accent: #ff85fd;
-    --white: #ffffff;
     --text-inverted: #13002e;
     --background-inverted: #ece9f2;
     --primary-inverted: #330080;
     --secondary-inverted: #081377;
     --accent-inverted: #7a0078;
-    --white-inverted: #000000;
+    --border-radius: 5px;
 }
 
 a {
@@ -56,10 +41,10 @@ body {
     width: calc(100% - 12px);
     height: 60px;
     border: 1px solid var(--primary);
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     padding-right: 10px;
     backdrop-filter: blur(10px);
-    background-color: rgba(var(--background), 0.5);
+    background-color: #0c0a1080;
     z-index: 999;
 }
 
@@ -86,7 +71,7 @@ body {
 }
 
 .navbar .links a {
-    background-color: rgba(var(--background), 0.5);
+    background-color: #0c0a1080;
     backdrop-filter: blur(10px);
     text-decoration: none;
     font-weight: 500;
@@ -95,12 +80,12 @@ body {
         transform 0.3s ease,
         padding 0.3s ease;
     border: 1px solid var(--primary);
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     padding: 5px;
 }
 
 .navbar .links a:hover {
-    color: var(--white);
+    color: white;
     transform: scale(1.2);
 }
 
@@ -123,12 +108,12 @@ body {
         transform 0.3s ease,
         padding 0.3s ease;
     border: 1px solid var(--primary);
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     padding: 5px;
 }
 
 .navbar .outlinks a:hover {
-    color: var(--white);
+    color: white;
     transform: scale(1.2);
 }
 
@@ -225,22 +210,6 @@ body {
 
 .footer .footer-content {
     margin-left: 50px;
-}
-
-.footer .footer-controls {
-    justify-self: end;
-    align-items: center;
-    margin-right: 40px;
-}
-
-.footer .footer-controls .themetoggle {
-    display: inline-flex;
-    align-items: center;
-    gap: 2px;
-    background-color: var(--accent);
-    color: var(--text-inverted);
-    border: 1px solid var(--primary);
-    border-radius: 5px;
 }
 
 .page-wrapper {
