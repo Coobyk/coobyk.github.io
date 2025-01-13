@@ -189,6 +189,11 @@ body {
 
 .hero .big_logo .text .quote {
     color: var(--secondary);
+    transition: all 0.2s ease;
+}
+
+.hero .big_logo .text .quote:hover {
+    text-shadow: 0 0 1rem var(--secondary);
 }
 
 .hero section {
