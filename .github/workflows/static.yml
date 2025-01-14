@@ -31,13 +31,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Update footer with build info
+        run: |
+          BUILD_INFO="Built on $(date '+%d.%m.%Y %H:%M:%S') after commit $(git rev-parse --short HEAD)"
+          sed -i "s|build_placeholder_dMyCV3BHWcQp|$BUILD_INFO|" index.html
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
           path: '.'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
