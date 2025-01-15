@@ -11,7 +11,7 @@ on:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
+  contents: write  # Changed from read to write
   pages: write
   id-token: write
 
@@ -34,8 +34,9 @@ jobs:
 
       - name: Update footer with build info
         run: |
-          sed -i "s|build_placeholder_dMyCV3BHWcQp|Built on $(date '+%d.%m.%Y %H:%M:%S') after commit $(git rev-parse --short HEAD)|" index.html
-
+          BUILD_DATE=$(date -u '+%Y-%m-%d %H:%M:%S UTC')
+          COMMIT_SHA=$(git rev-parse --short HEAD)
+          sed -i "s|build_placeholder_dMyCV3BHWcQp|Built on ${BUILD_DATE} (${COMMIT_SHA})|g" index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
