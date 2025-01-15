@@ -1,1 +1,1 @@
-Here will be content guidelines
+These Guidelines apply to the content of the website.

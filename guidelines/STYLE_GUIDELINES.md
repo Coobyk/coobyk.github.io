@@ -1,1 +1,1 @@
-Here will be style guidelines
+These Guidelines apply to the style of the website
