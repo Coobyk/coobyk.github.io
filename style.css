@@ -23,11 +23,9 @@ body {
     background-color: var(--background);
     color: var(--text);
     display: flex;
-    justify-content: center;
+    justify-content: first baseline;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
-    overflow-x: hidden;
     transition: all 0.3s ease;
 }
 
@@ -127,21 +125,20 @@ body {
 
 .hero {
     text-align: center;
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
-    margin-top: 40%;
 }
 
 .hero .big_logo {
     display: inline-flex;
     gap: 10%;
-    margin-top: 40vh;
+    margin-top: 15vh;
 }
 
 .hero .big_logo img {
     max-width: 500px;
-    width: auto;
     transition: transform 0.3s ease;
     clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
     -webkit-clip-path: polygon(
@@ -174,7 +171,6 @@ body {
 
 .hero .big_logo .text .name .letter {
     transform-origin: bottom;
-    margin: auto;
     margin-top: 0;
     transition:
         transform 0.1s ease,
@@ -233,9 +229,16 @@ body {
     list-style: square;
 }
 
+.hero section h3 {
+    margin-bottom: 0;
+}
+
+.hero section p {
+    margin-top: 0;
+}
+
 .footer {
     display: inline-flex;
-    gap: auto;
     border-top: 1px dashed var(--primary);
     width: 100%;
     bottom: 0;
