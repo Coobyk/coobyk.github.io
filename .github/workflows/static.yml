@@ -34,7 +34,7 @@ jobs:
       - name: Update footer with build info
         run: |
           mkdir -p build
-          cp -r src/ build/
+          cp -r src/* build/
           cd build
           ls -a
           BUILD_DATE=$(date -u '+%Y-%m-%d %H:%M:%S UTC')
