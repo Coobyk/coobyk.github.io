@@ -33,7 +33,9 @@ jobs:
         uses: actions/checkout@v4
       - name: Update footer with build info
         run: |
-          ls
+          mkdir build
+          cp src/ build/
+          cd build
           ls -a
           BUILD_DATE=$(date -u '+%Y-%m-%d %H:%M:%S UTC')
           COMMIT_SHA=$(git rev-parse --short HEAD)
