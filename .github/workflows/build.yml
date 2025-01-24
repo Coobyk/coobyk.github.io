@@ -43,12 +43,8 @@ jobs:
           npm install
           mkdir -p dist
           cp -r src/* dist
-          rm dist/output.css
-          rm dist/input.css
+          rm -f dist/{output.css,input.css}
           npx tailwindcss -i src/input.css -o dist/output.css --minify
-          ls -a
-          cd dist
-          ls -a
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
