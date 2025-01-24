@@ -41,6 +41,7 @@ jobs:
       - name: Build
         run: |
           npm install
+          mkdir -p dist
           cp -r src/* dist
           rm dist/output.css
           rm dist/input.css
