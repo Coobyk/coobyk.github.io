@@ -1,21 +1,22 @@
 {
-  "name": "coobik1234.github.io",
+  "name": "coobyk.github.io",
   "version": "1.0.0",
   "description": "Website ))) > [!Important] > Make sure to follow the Style Guidelines and the Content Guidelines before committing changes!",
-  "homepage": "https://github.com/Coobik1234/coobik1234.github.io#readme",
+  "homepage": "https://github.com/Coobyk/coobyk.github.io#readme",
   "bugs": {
-    "url": "https://github.com/Coobik1234/coobik1234.github.io/issues"
+    "url": "https://github.com/Coobyk/coobyk.github.io/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Coobik1234/coobik1234.github.io.git"
+    "url": "git+https://github.com/Coobyk/cobyk.github.io.git"
   },
   "license": "ISC",
   "author": "",
   "type": "commonjs",
   "main": "tailwind.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
   },
   "dependencies": {
     "@designbycode/tailwindcss-text-shadow": "^2.2.1",
