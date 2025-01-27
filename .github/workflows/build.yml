@@ -38,7 +38,7 @@ jobs:
           COMMIT_SHA=$(git rev-parse --short HEAD)
           sed -i "s|build_placeholder_dMyCV3BHWcQp|Built on ${BUILD_DATE} (${COMMIT_SHA})|g" index.html
           cd ..
-      - name: Install nmp packages
+      - name: Install npm packages
         run: |
           npm install
       - name: Copy and prepare files
