@@ -15,7 +15,9 @@
   "type": "commonjs",
   "main": "tailwind.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "watch": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
   },
   "dependencies": {
     "@designbycode/tailwindcss-text-shadow": "^2.2.1",
@@ -110,6 +112,6 @@
     "yaml": "^2.7.0"
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^4.0.0"
   }
 }
