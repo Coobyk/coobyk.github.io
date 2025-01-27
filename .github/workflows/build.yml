@@ -41,7 +41,6 @@ jobs:
       - name: Install nmp packages
         run: |
           npm install
-          npm install tailwindcss@latest
       - name: Copy and prepare files
         run: |
           mkdir -p dist
