@@ -48,7 +48,7 @@ jobs:
           rm -f dist/{output.css,input.css}
       - name: Build
         run: |
-          npm run build
+          npx tailwindcss -i src/input.css -o dist/output.css --minify
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
