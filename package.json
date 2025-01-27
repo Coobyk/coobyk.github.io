@@ -15,9 +15,7 @@
   "type": "commonjs",
   "main": "tailwind.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
-    "watch": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "@designbycode/tailwindcss-text-shadow": "^2.2.1",
@@ -108,5 +106,11 @@
     "which": "^2.0.2",
     "wrap-ansi": "^8.1.0",
     "yaml": "^2.7.0"
+<<<<<<< HEAD
+=======
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+>>>>>>> parent of a6566da (Update TailwindCSS)
   }
 }
