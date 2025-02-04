@@ -569,8 +569,16 @@ video {
   position: fixed;
 }
 
+.sticky {
+  position: sticky;
+}
+
 .top-0 {
   top: 0px;
+}
+
+.bottom-0 {
+  bottom: 0px;
 }
 
 .z-20 {
@@ -605,6 +613,10 @@ video {
   margin-top: 2rem;
 }
 
+.mb-0 {
+  margin-bottom: 0px;
+}
+
 .block {
   display: block;
 }
@@ -628,6 +640,10 @@ video {
 
 .max-h-96 {
   max-height: 24rem;
+}
+
+.min-h-screen {
+  min-height: 100vh;
 }
 
 .w-full {
