@@ -36,7 +36,7 @@ jobs:
           cd src
           BUILD_DATE=$(date -u '+%Y-%m-%d %H:%M:%S UTC')
           COMMIT_SHA=$(git rev-parse --short HEAD)
-          sed -i "s|build_placeholder_dMyCV3BHWcQp|Built on ${BUILD_DATE} (${COMMIT_SHA})|g" index.html
+          sed -i "s|build_placeholder_dMyCV3BHWcQp|Built on ${BUILD_DATE} (${COMMIT_SHA})|g" *.html
           cd ..
       - name: Install npm packages
         run: |
