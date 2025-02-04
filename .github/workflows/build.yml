@@ -45,10 +45,10 @@ jobs:
         run: |
           mkdir -p dist
           cp -r src/* dist
-          rm -f dist/{output.css,input.css}
+          rm -f dist/{style.css,input.css}
       - name: Build
         run: |
-          npx tailwindcss -i src/input.css -o dist/output.css --minify
+          npx tailwindcss -i src/input.css -o dist/style.css --minify
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
