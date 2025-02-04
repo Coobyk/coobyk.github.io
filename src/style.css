@@ -569,6 +569,14 @@ video {
   position: fixed;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
 .sticky {
   position: sticky;
 }
@@ -579,6 +587,26 @@ video {
 
 .bottom-0 {
   bottom: 0px;
+}
+
+.right-5 {
+  right: 1.25rem;
+}
+
+.top-5 {
+  top: 1.25rem;
+}
+
+.top-10 {
+  top: 2.5rem;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.right-10 {
+  right: 2.5rem;
 }
 
 .z-20 {
@@ -788,6 +816,18 @@ video {
 
 .text-center {
   text-align: center;
+}
+
+.align-baseline {
+  vertical-align: baseline;
+}
+
+.align-middle {
+  vertical-align: middle;
+}
+
+.align-bottom {
+  vertical-align: bottom;
 }
 
 .font-mono {
