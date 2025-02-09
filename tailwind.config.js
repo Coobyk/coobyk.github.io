@@ -12,7 +12,7 @@ module.exports = {
     fontFamily: {
       'mono': ['JetBrains Mono', 'monospace'],
       'sans': ['Noto Sans', 'sans-serif'],
-      'serif': ['Noto Serif', 'serif']
+      'serif': ['Latin Modern Roman', 'Noto Serif', 'serif']
     },
     extend: {},
   },
