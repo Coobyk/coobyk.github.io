@@ -1,6 +1,9 @@
 # Node.js dependencies
 node_modules/*
 
+Qodo Gen AI files
+qodo/*
+
 # Build output directories
 dist/*
 build/*
