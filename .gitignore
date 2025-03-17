@@ -50,3 +50,4 @@ coverage/
 # Generated Tailwind CSS output
 output.css
 output.min.css
+.qodo
