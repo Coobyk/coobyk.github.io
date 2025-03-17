@@ -2,4 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url(fonts/latinmodernregular.otf);
+@import url(/src/fonts/latinmodernregular.otf);
