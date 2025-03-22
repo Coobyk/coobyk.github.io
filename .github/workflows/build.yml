@@ -2,60 +2,68 @@
 name: Build Pages and Deploy
 
 on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
+    # Runs on pushes targeting the default branch
+    push:
+        branches: ["main"]
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+    # Allows you to run this workflow manually from the Actions tab
+    workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: write
-  pages: write
-  id-token: write
+    contents: write
+    pages: write
+    id-token: write
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
+    group: "pages"
+    cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Update footer with build info
-        run: |
-          cd src
-          BUILD_DATE=$(date -u '+%Y-%m-%d %H:%M:%S UTC')
-          COMMIT_SHA=$(git rev-parse --short HEAD)
-          sed -i "s|build_placeholder_dMyCV3BHWcQp|Built on ${BUILD_DATE} (${COMMIT_SHA})|g" *.html
-          cd ..
-      - name: Install npm packages
-        run: |
-          npm install
-      - name: Copy and prepare files
-        run: |
-          mkdir -p dist
-          cp -r src/* dist
-          rm -f dist/{style.css,input.css}
-      - name: Build
-        run: |
-          npx tailwindcss -i src/input.css -o dist/style.css --minify
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: 'dist'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+    # Single deploy job since we're just deploying
+    deploy:
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+            - name: List file
+              run: |
+                  echo "Files before processing:"
+                  tree
+            - name: Update footer with build info
+              run: |
+                  cd src
+                  BUILD_DATE=$(date -u '+%Y-%m-%d %H:%M:%S UTC')
+                  COMMIT_SHA=$(git rev-parse --short HEAD)
+                  sed -i "s|build_placeholder_dMyCV3BHWcQp|Built on ${BUILD_DATE} (${COMMIT_SHA})|g" *.html
+                  cd ..
+            - name: Install npm packages
+              run: |
+                  npm install
+            - name: Copy and prepare files
+              run: |
+                  mkdir -p dist
+                  cp -r src/* dist
+                  rm -f dist/{style.css,input.css}
+            - name: Build
+              run: |
+                  npx tailwindcss -i src/input.css -o dist/style.css --minify
+            - name: List files
+              run: |
+                  echo "Files after processing:"
+                  tree
+            - name: Setup Pages
+              uses: actions/configure-pages@v5
+            - name: Upload artifact
+              uses: actions/upload-pages-artifact@v3
+              with:
+                  # Upload entire repository
+                  path: "dist"
+            - name: Deploy to GitHub Pages
+              id: deployment
+              uses: actions/deploy-pages@v4
