@@ -52,7 +52,7 @@ jobs:
                   rm -f dist/{style.css,input.css}
             - name: Build
               run: |
-                  npx tailwindcss build -i src/input.css -o dist/style.css --minify
+                  npx tailwindcss -i src/input.css -o dist/style.css --minify
             - name: List files
               run: |
                   rm -rf node_modules

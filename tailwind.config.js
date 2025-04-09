@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     colors: {
@@ -16,12 +16,5 @@ export default {
     },
     extend: {},
   },
-  plugins: [
-    require('@designbycode/tailwindcss-text-shadow')({
-      shadowColor: "rgba(0, 0, 0, 0.5)",
-      shadowBlur: "60px",
-      shadowOffsetX: "0",
-      shadowOffsetY: "0",
-  }),
-  ]
+  plugins: []
 }
