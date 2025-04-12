@@ -17,6 +17,11 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require('@designbycode/tailwindcss-text-shadow')
+    require('@designbycode/tailwindcss-text-shadow')({
+      shadowColor: "rgba(0, 0, 0, 0.5)",
+      shadowBlur: "60px",
+      shadowOffsetX: "0",
+      shadowOffsetY: "0",
+  }),
   ]
 }
