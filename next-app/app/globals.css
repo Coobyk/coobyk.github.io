@@ -1,0 +1,30 @@
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
+
+:root {
+  --color-primary: #00ff00;
+  --color-secondary: #ffffff;
+  --color-accent: #00ff00;
+  --color-text: #ffffff;
+  --color-background: #0a0a0a;
+}
+
+body {
+  @apply bg-color-background text-color-text;
+}
+
+.text-shadow-color-primary {
+  text-shadow: 0 0 10px var(--color-primary);
+}
+
+.text-shadow-color-secondary {
+  text-shadow: 0 0 10px var(--color-secondary);
+}
+
+.text-shadow-blur {
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.text-shadow-blur-5 {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
