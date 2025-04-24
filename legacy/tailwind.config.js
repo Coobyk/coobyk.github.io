@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./pages/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
+  content: ["./src/**/*.{html,js}"],
   theme: {
     colors: {
       'color-text': '#e4d1ff',
@@ -22,6 +22,6 @@ module.exports = {
       shadowBlur: "60px",
       shadowOffsetX: "0",
       shadowOffsetY: "0",
-    }),
-  ],
-};
+  }),
+  ]
+}

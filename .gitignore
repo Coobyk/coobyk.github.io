@@ -7,6 +7,8 @@ node_modules/*
 # Build output directories
 dist/*
 build/*
+.next/
+out/
 
 # Temporary files and logs
 *.log
@@ -50,4 +52,9 @@ coverage/
 # Generated Tailwind CSS output
 output.css
 output.min.css
+
+# Qodo AI stuff
 .qodo
+
+# Legacy node modules
+legacy/node_modules

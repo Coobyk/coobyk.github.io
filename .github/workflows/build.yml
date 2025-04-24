@@ -31,40 +31,25 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v4
-            - name: List files
-              run: |
-                  echo "Files before processing:"
-                  tree
-            - name: Update footer with build info
-              run: |
-                  cd src
-                  BUILD_DATE=$(date -u '+%Y-%m-%d %H:%M:%S UTC')
-                  COMMIT_SHA=$(git rev-parse --short HEAD)
-                  sed -i "s|build_placeholder_dMyCV3BHWcQp|Built on ${BUILD_DATE} (${COMMIT_SHA})|g" *.html
-                  cd ..
+            - name: Setup Node.js
+              uses: actions/setup-node@v3
+              with:
+                node-version: '18'
             - name: Install npm packages
               run: |
                   npm install
-            - name: Copy and prepare files
+            - name: Build Next.js
+              run: npm run build
+            - name: List build output
               run: |
-                  mkdir -p dist
-                  cp -r src/* dist
-                  rm -f dist/{style.css,input.css}
-            - name: Build
-              run: |
-                  npx tailwindcss -i src/input.css -o dist/style.css --minify
-            - name: List files
-              run: |
-                  rm -rf node_modules
-                  echo "Files after processing:"
-                  tree
+                  echo "Files in out directory:"
+                  ls -R out
             - name: Setup Pages
               uses: actions/configure-pages@v5
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
               with:
-                  # Upload entire repository
-                  path: "dist"
+                  path: "out"
             - name: Deploy to GitHub Pages
               id: deployment
               uses: actions/deploy-pages@v4
