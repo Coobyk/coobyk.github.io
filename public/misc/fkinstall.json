@@ -1,0 +1,12 @@
+{
+    "apps": [
+        {
+            "name": "fkinstall",
+            "url": "https://github.com/Coobyk/fkinstall"
+        },
+        {
+            "name": "scrippiscrappa",
+            "url": "https://github.com/Coobyk/scrippiscrappa"
+        }
+    ]
+}

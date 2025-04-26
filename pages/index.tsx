@@ -6,7 +6,7 @@ export default function Home() {
       <Head>
         <title>Coobyk</title>
         <meta name="description" content="Website of Coobyk" />
-        <link rel="icon" href="/images/coobyk.svg" />
+        <link rel="icon" href="/coobyk.svg" />
         <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
         <link rel="stylesheet" href="https://lalten.github.io/lmweb/style/latinmodern-roman.css" type="text/css" />
@@ -16,7 +16,7 @@ export default function Home() {
         <header className="p-2 w-full flex justify-between items-center font-mono border z-30 border-color-primary rounded fixed top-0 backdrop-blur-lg bg-color-background bg-opacity-50">
           <div className="inline-flex">
             <a href="/" className="px-1 flex items-center gap-2 hover:scale-125 transition-all ease duration-300 hover:text-color-accent">
-              <img src="/images/coobyk.svg" alt="Logo" className="h-10" />
+              <img src="/coobyk.svg" alt="Logo" className="h-10" />
             </a>
             <a href="/" className="px-1 flex items-center gap-2 hover:scale-125 transition-all ease duration-300 hover:text-color-accent">
               <h3 className="text-color-primary font-bold">Coobyk</h3>
@@ -45,7 +45,7 @@ export default function Home() {
         {/* Main Content */}
         <main className="p-8 justify-center align-center flex flex-col gap-5">
           <div className="inline-flex gap-10 items-center h-fit self-center mt-20">
-            <img src="/images/coobyk.svg" alt="Profile Picture, a big cube" className="max-h-96 hover:scale-125 transition-all ease duration-300 z-20 shadow-2xl" style={{clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'}} />
+            <img src="/coobyk.svg" alt="Profile Picture, a big cube" className="max-h-96 hover:scale-125 transition-all ease duration-300 z-20 shadow-2xl" style={{clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'}} />
             <div className="text-center mt-4">
               <div className="flex justify-center font-mono text-color-primary text-9xl font-bold">
                 {[...'Coobyk'].map((char, i) => (
@@ -175,9 +175,6 @@ export default function Home() {
           <div className="text-left">
             <p>Made with ❤️ by Coobyk</p>
             <p>Copyright &copy; Coobyk (2024–2025)</p>
-          </div>
-          <div>
-            <script type="text/javascript" src="https://counter.websiteout.com/js/2/0/0/0"></script>
           </div>
           <small className="block text-center mt-2 font-mono font-thin">build_placeholder_dMyCV3BHWcQp</small>
         </footer>
