@@ -102,6 +102,10 @@ export default function Home() {
             </div>
             <ul className="list-[square] mt-4 space-y-4 pl-3">
               <li>
+                <h3 className="text-xl font-semibold font-mono text-color-secondary">15.05.2025</h3>
+                <p>Today, I decided that my new phone is going to be a Nothing Phone (3a) with 256GB storage and 12GB RAM. I want the black one. I'm not sure about the case though, I don't want it to turn yellow over time but I still want a transparent one in order to see the glass surface on the back. Do I even need one...?</p>
+              </li>
+              <li>
                 <h3 className="text-xl font-semibold font-mono text-color-secondary">15.01.2025</h3>
                 <p>Today, I fixed the GitHub Action that redeployed my site to Pages. I needed to go to the repository's settings, then select "GitHub Actions" as the build source under "Pages". Thanks to StackOverflow for this fix. This blog will be expanded to its own page soon, but for now, this is all there is. I plan to use the blog as some form of diary or notification service.</p>
               </li>
