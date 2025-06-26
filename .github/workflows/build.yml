@@ -44,6 +44,11 @@ jobs:
               run: |
                   echo "Files in out directory:"
                   ls -R out
+            - name: Update footer with build info
+              run: |
+                  BUILD_DATE=$(date -u '+%Y-%m-%d %H:%M:%S UTC')
+                  COMMIT_SHA=$(git rev-parse --short HEAD)
+                  find out -name "*.html" -exec sed -i "s|build_placeholder_dMyCV3BHWcQp|Built on ${BUILD_DATE} (${COMMIT_SHA})|g" {} +
             - name: Setup Pages
               uses: actions/configure-pages@v5
             - name: Upload artifact
