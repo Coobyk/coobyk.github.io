@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Layout from '../components/Layout'
+import Section from '../components/Section'
 
 export default function Blog() {
   return (
@@ -11,47 +13,24 @@ export default function Blog() {
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
       </Head>
       <div className="bg-color-background text-color-text min-h-screen">
-        <header className="p-2 w-full flex justify-between items-center font-mono border z-30 border-color-primary rounded fixed top-0 backdrop-blur-lg bg-color-background bg-opacity-50">
-          <div className="inline-flex">
-            <a href="/" className="px-1 flex items-center gap-2 hover:scale-125 transition-all ease duration-300 hover:text-color-accent">
-              <img src="/images/coobyk.svg" alt="Logo" className="h-10" />
-            </a>
-            <a href="/blog" className="px-1 flex items-center gap-2 hover:scale-125 transition-all ease duration-300 hover:text-color-accent">
-              <h3 className="text-color-primary font-bold">Blog</h3>
-            </a>
-          </div>
-          <ul className="flex gap-4">
-            <li className="hover:scale-125 transition-transform ease duration-300"><a className="text-color-accent p-1 rounded border border-color-primary hover:text-color-text hover:border-color-accent transition-all duration-300 ease hover:shadow hover:shadow-color-accent backdrop-blur-lg bg-color-background bg-opacity-50" href="/">Portfolio</a></li>
-            <li className="hover:scale-125 transition-transform ease duration-300"><a className="text-color-accent p-1 rounded border border-color-primary hover:text-color-text hover:border-color-accent transition-all duration-300 ease hover:shadow hover:shadow-color-accent backdrop-blur-lg bg-color-background bg-opacity-50" href="#projects">Projects</a></li>
-          </ul>
-          <ul className="flex gap-4">
-            <li className="hover:scale-125 transition-transform ease duration-300"><a className="text-color-accent p-1 rounded border border-color-primary hover:text-color-text hover:border-color-accent transition-all duration-300 ease hover:shadow hover:shadow-color-accent backdrop-blur-lg bg-color-background bg-opacity-50" href="https://t.me/Coobyk" target="_blank" rel="noopener noreferrer">Telegram</a></li>
-            <li className="hover:scale-125 transition-transform ease duration-300"><a className="text-color-accent p-1 rounded border border-color-primary hover:text-color-text hover:border-color-accent transition-all duration-300 ease hover:shadow hover:shadow-color-accent backdrop-blur-lg bg-color-background bg-opacity-50 mr-2" href="https://github.com/Coobyk" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-          </ul>
-        </header>
-        <main className="p-8 justify-center align-center flex flex-col gap-5">
-          <div className="inline-flex gap-10 items-center h-fit self-center mt-20">
-            <img src="/images/coobyk.svg" alt="Profile Picture, a big cube" className="max-h-96 hover:scale-125 transition-all ease duration-300 z-20 shadow-2xl" style={{clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'}} />
-            <div className="text-center mt-4">
-              <div className="flex justify-center font-mono text-color-primary text-9xl font-bold">
-                {[...'Blog'].map((char, i) => (
-                  <span key={i} className="hover:scale-150 transition-all ease origin-bottom hover:text-shadow text-shadow-color-primary text-shadow-blur">{char}</span>
-                ))}
+        <Layout>
+          <main className="p-8 justify-center align-center flex flex-col gap-5">
+            <div className="inline-flex gap-10 items-center h-fit self-center mt-20">
+              <img src="/images/coobyk.svg" alt="Profile Picture, a big cube" className="max-h-96 hover:scale-125 transition-all ease duration-300 z-20 shadow-2xl" style={{clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'}} />
+              <div className="text-center mt-4">
+                <div className="flex justify-center font-mono text-color-primary text-9xl font-bold">
+                  {[...'Blog'].map((char, i) => (
+                    <span key={i} className="hover:scale-150 transition-all ease origin-bottom hover:text-shadow text-shadow-color-primary text-shadow-blur">{char}</span>
+                  ))}
+                </div>
+                <h3 className="text-color-secondary transition-all font-mono text-xl mt-2 hover:text-shadow text-shadow-color-secondary text-shadow-blur-5">"My blog where I post things"</h3>
               </div>
-              <h3 className="text-color-secondary transition-all font-mono text-xl mt-2 hover:text-shadow text-shadow-color-secondary text-shadow-blur-5">"My blog where I post things"</h3>
             </div>
-          </div>
-          <section className="mt-8 self-center max-w-[66%] bg-opacity-10 bg-color-secondary rounded-3xl p-7">
-            <h1 className="text-3xl font-bold font-mono text-color-secondary">This blog will be generated by <a className="text-color-accent" href="https://github.com/Coobyk/Avocado" target="_blank" rel="noopener noreferrer">Avocado</a>. Please check <a className="text-color-accent" href="https://github.com/Coobyk/Avocado" target="_blank" rel="noopener noreferrer">Avocado</a>'s repository to see when it will be ready.</h1>
-          </section>
-        </main>
-        <footer className="inline-flex items-center justify-between w-full p-4 border-t border-color-primary border-dashed mt-10">
-          <div className="text-left">
-            <p>Made with ❤️ by <span className="font-mono text-color-primary">Coobyk</span></p>
-            <p>Copyright &copy; Coobyk (2024–2025)</p>
-          </div>
-          <small className="block text-center mt-2 font-mono font-thin">build_placeholder_dMyCV3BHWcQp</small>
-        </footer>
+            <Section title="Blog">
+              <h1 className="text-3xl font-bold font-mono text-color-secondary">This blog will be generated by <a className="text-color-accent" href="https://github.com/Coobyk/Avocado" target="_blank" rel="noopener noreferrer">Avocado</a>. Please check <a className="text-color-accent" href="https://github.com/Coobyk/Avocado" target="_blank" rel="noopener noreferrer">Avocado</a>'s repository to see when it will be ready.</h1>
+            </Section>
+          </main>
+        </Layout>
       </div>
     </>
   )
